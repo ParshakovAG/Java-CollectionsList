@@ -3,13 +3,12 @@ package practice;
 import java.util.ArrayList;
 
 public class TodoList {
-    ArrayList <String> todoList = new ArrayList<>();
+    ArrayList<String> todoList = new ArrayList<>();
 
     public void add(String todo) {
         // TODO: добавьте переданное дело в конец списка
         this.todoList.add(todo);
-        System.out.println("Задача " + "\"" + todo + "\"" + " добавлена под номером "
-                + this.todoList.indexOf(todo));
+        System.out.println("Задача " + "\"" + todo + "\"" + " добавлена под номером " + this.todoList.indexOf(todo));
     }
 
     public void add(int index, String todo) {
@@ -17,8 +16,8 @@ public class TodoList {
         //  проверьте возможность добавления
         if (index > this.todoList.size()) {
             index = this.todoList.size();
-            System.out.println("Заданный индекс превышает размер ArrayList, данная задача будет " +
-                               "находиться в конце списка");}
+            System.out.println("Заданный индекс превышает размер ArrayList, данная задача будет находиться в конце списка");
+        }
         this.todoList.add(index, todo);
     }
 
@@ -44,8 +43,9 @@ public class TodoList {
 
     public ArrayList<String> getTodos() {
         // TODO: вернуть список дел
-        for (int i = 0; i < todoList.size(); i++){
-            System.out.println(todoList.indexOf(todoList.get(i)) + " - " + todoList.get(i));}
+        for (int i = 0; i < todoList.size(); i++) {
+            System.out.println(todoList.indexOf(todoList.get(i)) + " - " + todoList.get(i));
+        }
         return todoList;
     }
 
