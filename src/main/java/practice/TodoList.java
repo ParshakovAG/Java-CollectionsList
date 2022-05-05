@@ -16,7 +16,8 @@ public class TodoList {
         //  проверьте возможность добавления
         if (index > this.todoList.size()) {
             index = this.todoList.size();
-            System.out.println("Заданный индекс превышает размер ArrayList, данная задача будет находиться в конце списка");
+            System.out.println("Заданный индекс превышает размер ArrayList, данная задача будет находиться " +
+                    "в конце списка");
         }
         this.todoList.add(index, todo);
     }
@@ -27,8 +28,9 @@ public class TodoList {
         if (index > this.todoList.size()) {
             System.out.println("Задачи с таким индексом не существует :( \nВзгляните на список задач:");
             getTodos();
-        } else
+        } else {
             this.todoList.set(index, todo);
+        }
     }
 
     public void delete(int index) {
@@ -37,8 +39,9 @@ public class TodoList {
         if (index >= this.todoList.size()) {
             System.out.println("Задачи с таким индексом не существует :( \nВзгляните на список задач:");
             getTodos();
-        } else
+        } else {
             this.todoList.remove(index);
+        }
     }
 
     public ArrayList<String> getTodos() {
